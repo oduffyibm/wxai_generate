@@ -11,8 +11,10 @@ def main():
     load_dotenv(envloc)
 
     credentials = Credentials(
-        url = os.getenv('url'),
-        api_key = os.getenv('api_key'),
+        #url = os.getenv('url'),
+        #api_key = os.getenv('api_key'),
+        url = st.secrets['url'],
+        api_key = st.secrets['api_key']
     )
 
     project_id = 'cec51c53-de81-40d9-a95a-e252d28addb8'
