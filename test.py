@@ -45,7 +45,7 @@ def main():
     verify=verify,
     )
 
-    Company = st.text_input("Company Name","Walmart")
+    Company = st.text_input("Bank","Citibank")
 
     prompt = f"""
     Generate a 5 sentence marketing message for a company with the given characteristics.
