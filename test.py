@@ -1,4 +1,5 @@
 from ibm_watsonx_ai import Credentials, APIClient
+import streamlit as st
 import os
 from dotenv import load_dotenv, find_dotenv
 from ibm_watsonx_ai.foundation_models import ModelInference
@@ -41,7 +42,8 @@ def main():
     verify=verify,
     )
 
-    Company = "Walmart"
+    Company = st.text_input("Company Name","Walmart")
+
     prompt = f"""
     Generate a 5 sentence marketing message for a company with the given characteristics.
 
@@ -60,7 +62,8 @@ def main():
 
 
     #print(model.generate(prompt))
-    print(model.generate_text(prompt))
+    st.title("Email Generation")
+    st.write(model.generate_text(prompt))
 
 
 
