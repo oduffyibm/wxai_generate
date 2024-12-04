@@ -29,7 +29,8 @@ def main():
     params = {
         "decoding_method": "sample",
         "temperature": 1.0,
-        "max_new_tokens": 100
+        "max_new_tokens": 100,
+        "min_new_tokens": 50
     }
 
     model_id = "google/flan-t5-xxl"
