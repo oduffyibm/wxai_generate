@@ -19,7 +19,7 @@ def main():
 
     project_id = 'cec51c53-de81-40d9-a95a-e252d28addb8'
     space_id = 'eb924898-995a-4ded-b299-ff34982b2cfc'
-    client = APIClient(credentials, space_id = space_id)
+    client = APIClient(credentials, project_id = project_id)
 
 
         # Prepare input data
