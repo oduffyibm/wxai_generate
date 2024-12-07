@@ -1,12 +1,15 @@
 import requests
 import os
 from dotenv import find_dotenv, load_dotenv
+from ibm_cloud_sdk_core import IAMTokenManager
 
 location = find_dotenv()
 load_dotenv(location)
 
+api_key =os.getenv('api_key')
+project_id = os.getenv('project_id')
 
-url = "https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29"
+url = "https://us-south.ml.cloud.ibm.com/ml/v1-beta/generation/text?version=2023-05-28"
 
 body = {
 	"parameters": {
@@ -20,7 +23,7 @@ body = {
 		"repetition_penalty": 2
 	},
 	"model_id": "google/flan-t5-xxl",
-	"project_id": os.getenv('project_id'),
+	"project_id": project_id,
 	"moderations": {
 		"hap": {
 			"input": {
@@ -60,7 +63,7 @@ body = {
 headers = {
 	"Accept": "application/json",
 	"Content-Type": "application/json",
-	"Authorization": "Bearer " + os.getenv('api_key')
+	"Authorization": "Bearer " + access_token
 }
 
 response = requests.post(
@@ -69,9 +72,7 @@ response = requests.post(
 	json=body
 )
 
-#if response.status_code != 200:
-#	raise Exception("Non-200 response: " + str(response.text))
+if response.status_code != 200:
+	raise Exception("Non-200 response: " + str(response.text))
 
 data = response.json()
-
-print(data)
