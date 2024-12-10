@@ -30,11 +30,11 @@ def main():
         "decoding_method": "greedy",
         #"temperature": 1.0,
         "max_new_tokens": 200,
-        "min_new_tokens": 50,
+        "min_new_tokens": 100,
         "end_sequence": "."
     }
 
-    model_id = "google/flan-t5-xxl"
+    model_id = "google/flan-ul2-20b"
     verify = False
 
     model = ModelInference(
