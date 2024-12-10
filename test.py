@@ -28,7 +28,7 @@ def main():
     
     params = {
         "decoding_method": "sample",
-        "temperature": 0.5,
+        "temperature": 1.0,
         "max_new_tokens": 100,
         "min_new_tokens": 50
     }
@@ -45,10 +45,12 @@ def main():
     verify=verify,
     )
 
-    Company = st.text_input("Company","Citibank")
+    War = st.text_input("War","Citibank")
 
     prompt = f"""
-    Generate a two-sentence joke about {Company}\. The first sentence should be a question and the second sentence should be the punchline.
+    Generate summary of {War}\. The summary should include the nations or groups involved in the war. 
+    It should also include who
+    won the war and why they won.
 
     """
 
