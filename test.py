@@ -29,8 +29,9 @@ def main():
     params = {
         "decoding_method": "sample",
         "temperature": 1.0,
-        "max_new_tokens": 100,
-        "min_new_tokens": 50
+        "max_new_tokens": 200,
+        "min_new_tokens": 50,
+        "end_sequence": "."
     }
 
     model_id = "google/flan-t5-xxl"
@@ -45,7 +46,7 @@ def main():
     verify=verify,
     )
 
-    War = st.text_input("War","Citibank")
+    War = st.text_input("War","War of the Roses")
 
     prompt = f"""
     Generate summary of {War}\. The summary should include the nations or groups involved in the war. 
