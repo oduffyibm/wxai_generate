@@ -28,7 +28,7 @@ def main():
     
     params = {
         "decoding_method": "sample",
-        "temperature": 1.2,
+        "temperature": 0.6,
         "max_new_tokens": 200,
         "min_new_tokens": 100,
         "end_sequence": "."
