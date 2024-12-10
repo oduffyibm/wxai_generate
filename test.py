@@ -45,14 +45,11 @@ def main():
     verify=verify,
     )
 
-    Company = st.text_input("Bank","Citibank")
+    Company = st.text_input("Company","Citibank")
 
     prompt = f"""
-    Generate a joke about the given Company.
+    Generate a two-sentence joke about {Company}\. The first sentence should be a question and the second sentence should be the punchline.
 
-    Characteristics:
-
-    Company - {Company}\
     """
 
 
