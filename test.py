@@ -49,7 +49,7 @@ def main():
     War = st.text_input("War","War of the Roses")
 
     prompt = f"""
-    Generate summary of {War}\. The summary should include the nations or groups involved in the war. 
+    Prompt: Generate five-sentence summary of {War}\. The summary should include the nations or groups involved in the war. 
     It should also include who
     won the war and why they won.
 
@@ -59,7 +59,7 @@ def main():
 
 
     #print(model.generate(prompt))
-    st.title("Joke Generator")
+    st.title("War summary")
     st.write(model.generate_text(prompt))
 
 
