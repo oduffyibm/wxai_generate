@@ -27,8 +27,8 @@ def main():
     input_data = {"Company": "JP Morgan & Chase"}
     
     params = {
-        "decoding_method": "sample",
-        "temperature": 1.0,
+        "decoding_method": "greedy",
+        #"temperature": 1.0,
         "max_new_tokens": 200,
         "min_new_tokens": 50,
         "end_sequence": "."
