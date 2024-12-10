@@ -27,8 +27,8 @@ def main():
     input_data = {"Company": "JP Morgan & Chase"}
     
     params = {
-        "decoding_method": "greedy",
-        #"temperature": 1.0,
+        "decoding_method": "sample",
+        "temperature": 1.2,
         "max_new_tokens": 200,
         "min_new_tokens": 100,
         "end_sequence": "."
@@ -50,10 +50,7 @@ def main():
 
     prompt = f"""
     Prompt: Generate summary of {War}. The summary should include the nations or groups involved in the war. 
-    It should also include who
-    won the war and why they won.
-
-    After that, list 3 questions questions you might see in a history classroom based on {War} and answers to those quesitons.
+    It should also include who won the war and why they won.
 
     """
 
