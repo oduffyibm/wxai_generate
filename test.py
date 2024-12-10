@@ -34,7 +34,7 @@ def main():
         "end_sequence": "."
     }
 
-    model_id = "google/flan-ul2-20b"
+    model_id = "google/flan-t5-xxl"
     verify = False
 
     model = ModelInference(
