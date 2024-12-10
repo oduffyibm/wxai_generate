@@ -49,11 +49,11 @@ def main():
     War = st.text_input("War","War of the Roses")
 
     prompt = f"""
-    Prompt: Generate five-sentence summary of {War}\. The summary should include the nations or groups involved in the war. 
+    Prompt: Generate summary of {War}. The summary should include the nations or groups involved in the war. 
     It should also include who
     won the war and why they won.
 
-    Summary:
+    After that, list 3 questions questions you might see in a history classroom based on {War} and answers to those quesitons.
 
     """
 
