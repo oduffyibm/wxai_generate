@@ -48,24 +48,16 @@ def main():
     Company = st.text_input("Bank","Citibank")
 
     prompt = f"""
-    Generate a 5 sentence marketing message for a company with the given characteristics.
+    Generate a joke about the given Company.
 
     Characteristics:
 
-    Company - {Company}
-
-    Offer includes - no fees, 2% interest rate, no minimum balance
-
-    Tone - informative
-
-    Response requested - click the link
-
-    End date - July 15
+    Company - {Company}\
     """
 
 
     #print(model.generate(prompt))
-    st.title("Email Generation")
+    st.title("Joke Generator")
     st.write(model.generate_text(prompt))
 
 
